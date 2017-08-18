@@ -42,20 +42,20 @@ class Swinggy{
      * @param $status_determinators - the array list of <i>status determinators</i>.
      * A sample is as follows: <br/>
      * <code>[
-     *  [status_init,
+     *  status_init =>
      *      function(){
      *          // you should always return false when in initial status
      *          // so that Swinggy will move onto next determinator
      *          return false;
-     *      }],
-     *  [status_foo,
+     *      },
+     *  status_foo =>
      *      function(){
      *          return ...;
-     *      }],
-     *  [status_bar,
+     *      },
+     *  status_bar =>
      *      function(){
      *          return ...;
-     *      }],
+     *      },
      *  ...
      * ]</code><br/>
      * The <i>status determinators</i> will be stored and then used in <b>ready()</b> method.
@@ -90,14 +90,14 @@ class Swinggy{
      * @param $performers - the array list of <i>performers</i>.
      * A sample is as follows:
      * <code>[
-     *  ["head",
+     *  "head" =>
      *      function($boku){
      *          ...
-     *      }],
-     *  ["body",
+     *      },
+     *  "body" =>
      *      function($boku){
      *          ...
-     *      }],
+     *      },
      *  ...
      * ]</code><br/>
      * It is recommended to use <b>$boku->stat</b> with <b>switch</b> branching statement inside the <i>performer</i>.
